@@ -16,7 +16,7 @@ font-family: "Poppins", sans-serif;
 }
 
 html{
-font-size: 60%;
+font-size: 120%;
 overflow-x: hidden;
 }
 body{
@@ -265,7 +265,7 @@ text-align: center;
 margin: 5rem 0;
 }
 .pendidikan{
-padding: 100px 15px;
+padding: 80px 15px;
 background: var(--second-bg-color);
 }
 .pendidikan h2{
