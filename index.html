@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MyPortofolio</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -185,7 +187,7 @@
     <section class="contact" id="contact">
       <h2 class="contact-heading">Contact <span>Me</span></h2>
 
-      <form action="" id="whatsappForm">
+      <form action="">
         <div class="input-box">
           <input type="text" id="name" placeholder="Full Name" />
           <input type="email" id="email" placeholder="Email" />
@@ -200,7 +202,8 @@
             rows="10"
             placeholder="Your Message"
           ></textarea>
-          <input type="submit" value="Send Message" class="btn" />
+          <br />
+          <input type="submit" onclick="return sendMessage()" class="btn" />
         </div>
       </form>
     </section>
@@ -229,8 +232,24 @@
       </ul>
       <p class="copyright">&copy; Muhammad Shidiq | All Rights Reserved</p>
     </footer>
-    <script src="/script.js"></script>
-    <script src="/adlistener.js"></script>
+    <script>
+      function sendMessage() {
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+
+        const url =
+          "https://api.whatsapp.com/send?phone=6282384897258&text=Halo%20Developer%0ASaya*nama*" +
+          name +
+          "*%0AEmail%20Saya%20*" +
+          email +
+          "*%0A%0A*" +
+          message +
+          "*";
+
+        window.open(url);
+      }
+    </script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>
